@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice Notepad</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Voice Notepad</h1>
+    <p>Speak your thoughts. Get back structured notes.</p>
+  </header>
+
+  <div id="unsupported">
+    Your browser does not support the Web Speech API.<br/>
+    Please open this page in <strong>Chrome on Android or desktop</strong>.
+  </div>
+
+  <button id="recordBtn" title="Start recording">&#x1F3A4;</button>
+  <div id="status">Tap to start recording</div>
+
+  <div id="transcript-container">
+    <div class="label">Live Transcript</div>
+    <div id="transcript">
+      <span class="placeholder">Your spoken words will appear here as you talk...</span>
+    </div>
+    <span id="interim"></span>
+  </div>
+
+  <div id="actions" style="display:none;">
+    <button id="formatBtn">Format with AI</button>
+    <button id="clearBtn">Clear</button>
+  </div>
+
+  <div id="note-container" style="display:none;">
+    <div class="label">Formatted Note</div>
+    <div id="note-output"></div>
+    <button id="saveBtn">Save Note</button>
+  </div>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
